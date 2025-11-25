@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Container, Navbar, Nav, Button } from 'react-bootstrap';
 import { Logo } from './components/Logo';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -12,59 +11,31 @@ import Realisations from './pages/Realisations';
 import References from './pages/References';
 
 function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-white">
-        <nav className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
-              <Link to="/" className="flex items-center">
-                <Logo className="text-blue-600" variant="dark" />
-              </Link>
-
-              <div className="hidden md:flex items-center space-x-8">
-                <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Accueil</Link>
-                <Link to="/produits" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Produits</Link>
-                <Link to="/realisations" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Réalisations</Link>
-                <Link to="/references" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Références</Link>
-                <Link to="/a-propos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">À Propos</Link>
-                <Link
-                  to="/devis"
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg shadow-blue-600/30 font-medium"
-                >
-                  Demander un Devis
-                </Link>
-              </div>
-
-              <button
-                className="md:hidden text-gray-700"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-
-          {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-t border-gray-100">
-              <div className="px-4 py-4 space-y-3">
-                <Link to="/" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Accueil</Link>
-                <Link to="/produits" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Produits</Link>
-                <Link to="/realisations" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Réalisations</Link>
-                <Link to="/references" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Références</Link>
-                <Link to="/a-propos" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">À Propos</Link>
-                <Link
-                  to="/devis"
-                  className="block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg text-center font-medium"
-                >
-                  Demander un Devis
-                </Link>
-              </div>
-            </div>
-          )}
-        </nav>
+      <div style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
+        <Navbar expand="lg" fixed="top" bg="white" className="shadow-sm border-bottom">
+          <Container>
+            <Navbar.Brand as={Link} to="/">
+              <Logo className="text-primary" variant="dark" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto align-items-center">
+                <Nav.Link as={Link} to="/" className="fw-medium px-3">Accueil</Nav.Link>
+                <Nav.Link as={Link} to="/produits" className="fw-medium px-3">Produits</Nav.Link>
+                <Nav.Link as={Link} to="/realisations" className="fw-medium px-3">Réalisations</Nav.Link>
+                <Nav.Link as={Link} to="/references" className="fw-medium px-3">Références</Nav.Link>
+                <Nav.Link as={Link} to="/a-propos" className="fw-medium px-3">À Propos</Nav.Link>
+                <Nav.Link as={Link} to="/devis" className="ms-lg-2">
+                  <Button variant="primary" className="fw-medium">
+                    Demander un Devis
+                  </Button>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
         <Routes>
           <Route path="/" element={<Home />} />

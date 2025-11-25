@@ -1,5 +1,6 @@
 import { Calendar, User, Clock, Tag, ArrowLeft, Share2, BookOpen, ChevronRight } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
+import { Logo } from '../components/Logo';
 
 export default function Article() {
   const { id } = useParams();
@@ -284,6 +285,23 @@ export default function Article() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-950 text-gray-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <Logo className="text-white" variant="light" />
+          </div>
+          <div className="text-center space-y-3">
+            <p className="text-sm">
+              © {new Date().getFullYear()} SARL TEG - Technique Équipements Garage. Tous droits réservés.
+            </p>
+            <p className="text-sm text-gray-500">
+              Fondée en 2006 | 17 ans d'excellence en équipements automobiles et industriels
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

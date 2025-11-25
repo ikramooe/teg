@@ -1,4 +1,4 @@
-import * as bootstrap from '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Collapse } from 'bootstrap';
 
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.querySelector('.navbar-collapse');
 
     if (navbarCollapse) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        const bsCollapse = new Collapse(navbarCollapse, {
             toggle: false
         });
 

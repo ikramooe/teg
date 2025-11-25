@@ -242,44 +242,6 @@ export default function Realisations() {
           </div>
         )}
 
-        <div className="bg-white rounded-3xl shadow-2xl p-12 mb-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Références</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Forte de son expérience, TEG accompagne plus de dizaines de clients avec des solutions innovantes,
-              pour répondre aux grands enjeux industriels des entreprises
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {[
-              { name: 'Kia', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/KIA-150x150.png' },
-              { name: 'Peugeot', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/PEUGEOT-150x150.png' },
-              { name: 'Volkswagen', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/volkswagen-service-150x150.png' },
-              { name: 'Sovac', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/sovac-150x150.png' },
-              { name: 'Cevital', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/cevital-logo-150x150.jpg' },
-              { name: 'Renault', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/RENAULT-150x150.png' },
-              { name: 'Global Axis', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/GLOBAL-AXIS-150x150.png' },
-              { name: 'MPV', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/mpv-maintenance-prestations-vehicules-150x150.png' },
-              { name: 'Astaldi', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/ASTALDI-150x150.png' },
-              { name: 'Globale Réalisation', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/Globale-realisation-150x150.png' },
-              { name: 'Cevital MTP', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/cevital-mtp-150x150.png' },
-              { name: 'MA Prod', logo: 'https://teg-dz.com/wp-content/uploads/2021/08/Ma-prod-controle-technique-150x150.jpg' }
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-w-full h-auto object-contain"
-                  style={{ maxHeight: '80px' }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-2xl p-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Votre Projet est Notre Priorité

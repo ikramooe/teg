@@ -1,10 +1,8 @@
-import { Menu, X, Phone, Mail, MapPin, Clock, ChevronRight, Wrench, GraduationCap, Headphones, Package, Award, Shield, Zap, Users } from 'lucide-react';
-import { useState } from 'react';
+import { Phone, Mail, MapPin, Clock, ChevronRight, Wrench, GraduationCap, Headphones, Package, Award, Shield, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '../components/Logo';
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     {
@@ -115,53 +113,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <Logo className="text-blue-600" variant="dark" />
-            </div>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#accueil" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Accueil</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
-              <a href="#produits" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Produits</a>
-              <a href="#apropos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">À Propos</a>
-              <a href="#contact" className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg shadow-blue-600/30 font-medium">
-                Contact
-              </a>
-            </div>
-
-            <button
-              className="md:hidden text-gray-700"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
-            <div className="px-4 py-4 space-y-3">
-              <a href="#accueil" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Accueil</a>
-              <a href="#services" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Services</a>
-              <a href="#produits" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Produits</a>
-              <a href="#apropos" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">À Propos</a>
-              <a href="#contact" className="block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg text-center font-medium">
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
-
       {/* Hero Section */}
       <section id="accueil" className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://teg-dz.com/wp-content/themes/teg/assets/img/TEG_Fond%20blue.jpg"
+            src="/hero-bg.jpg"
             alt="TEG Background"
             className="w-full h-full object-cover opacity-95"
           />

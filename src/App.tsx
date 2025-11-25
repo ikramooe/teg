@@ -9,7 +9,6 @@ import ServiceDetail from './pages/ServiceDetail';
 import Quote from './pages/Quote';
 import About from './pages/About';
 import Realisations from './pages/Realisations';
-import References from './pages/References';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +27,6 @@ function App() {
                 <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Accueil</Link>
                 <Link to="/produits" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Produits</Link>
                 <Link to="/realisations" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Réalisations</Link>
-                <Link to="/references" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Références</Link>
                 <Link to="/a-propos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">À Propos</Link>
                 <Link
                   to="/devis"
@@ -53,7 +51,6 @@ function App() {
                 <Link to="/" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Accueil</Link>
                 <Link to="/produits" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Produits</Link>
                 <Link to="/realisations" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Réalisations</Link>
-                <Link to="/references" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">Références</Link>
                 <Link to="/a-propos" className="block text-gray-700 hover:text-blue-600 py-2 font-medium">À Propos</Link>
                 <Link
                   to="/devis"
@@ -74,7 +71,6 @@ function App() {
           <Route path="/devis" element={<Quote />} />
           <Route path="/a-propos" element={<About />} />
           <Route path="/realisations" element={<Realisations />} />
-          <Route path="/references" element={<References />} />
         </Routes>
       </div>
     </BrowserRouter>
